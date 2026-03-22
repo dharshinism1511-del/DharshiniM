@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Dharshini M — Laxmi Charities Scholar | CSE Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0a0a1f;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    nav {
+      padding: 1.2rem 0;
+      border-bottom: 1px solid #eef2ff;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #1e293b, #2563eb);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #1e293b;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+    .top-ribbon {
+      background: #f1f5fe;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.4rem 1.3rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #1e40af;
+      margin: 2rem 0 1.5rem 0;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 2.5rem;
+      align-items: start;
+      padding: 1rem 0 2rem;
+    }
+    .hero-left h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin: 0.5rem 0 0.25rem;
+      background: linear-gradient(to right, #0f172a, #1f3a8a);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .hero-role {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #2563eb;
+      margin: 0.25rem 0 0.5rem;
+    }
+    .hero-desc {
+      color: #334155;
+      margin: 0.75rem 0 1rem;
+      font-size: 1rem;
+    }
+    .stats-row {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .stat-card {
+      background: #ffffff;
+      border-radius: 1.2rem;
+      padding: 0.7rem 1.2rem;
+      border: 1px solid #eef2ff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      transition: transform 0.2s, box-shadow 0.2s;
+      min-width: 100px;
+      text-align: center;
+    }
+    .stat-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.1);
+      border-color: #cbdffc;
+    }
+    .stat-number {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.2;
+    }
+    .stat-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .hero-right {
+      background: #fafcff;
+      border-radius: 1.8rem;
+      padding: 1.6rem;
+      border: 1px solid #eef2ff;
+      box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.05);
+    }
+    .info-row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      align-items: center;
+    }
+    .info-icon {
+      width: 2rem;
+      color: #2563eb;
+      font-size: 1.1rem;
+    }
+    .scholar-highlight {
+      background: #eef2ff;
+      border-radius: 1.2rem;
+      padding: 0.9rem;
+      margin-top: 1.2rem;
+      text-align: center;
+      font-weight: 500;
+      font-size: 0.85rem;
+    }
+    section {
+      padding: 3rem 0;
+      border-bottom: 1px solid #edf2f7;
+    }
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      letter-spacing: -0.01em;
+      background: linear-gradient(135deg, #111827, #2d3a5e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .grid-2col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #eef2ff;
+      border-radius: 1.5rem;
+      padding: 1.6rem;
+      transition: all 0.25s ease;
+    }
+    .card:hover {
+      border-color: #cbdffc;
+      box-shadow: 0 12px 24px -16px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+    }
+    .card-icon {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #2563eb;
+    }
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+    .skill-tag {
+      background: #f1f5f9;
+      padding: 0.35rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .academic-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    .academic-table th, .academic-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #eef2ff;
+    }
+    .academic-table th {
+      background: #f8fafc;
+      font-weight: 600;
+    }
+    .achievement-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .achievement-list li {
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .achievement-list i {
+      color: #2563eb;
+      width: 1.4rem;
+    }
+    .contact-card {
+      background: #f9fafc;
+      border-radius: 2rem;
+      padding: 1.8rem;
+      margin: 1rem 0 2rem;
+      text-align: center;
+      border: 1px solid #eef2ff;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.4rem;
+      margin: 1rem 0 0.8rem;
+    }
+    .social-icons a {
+      color: #4b5563;
+      transition: color 0.2s;
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      color: #2563eb;
+    }
+    footer {
+      text-align: center;
+      padding: 1.8rem;
+      font-size: 0.8rem;
+      color: #5b6e8c;
+      border-top: 1px solid #edf2f7;
+    }
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .grid-2col {
+        grid-template-columns: 1fr;
+      }
+      .container {
+        padding: 0 1.5rem;
+      }
+      .hero-left h1 {
+        font-size: 2.5rem;
+      }
+      .stats-row {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-flex">
+      <div class="logo">Dharshini M ✦ Portfolio</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#academics">Academics</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#impact">Impact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="top-ribbon">
+      <i class="fas fa-trophy"></i> ✨ Laxmi Charities Scholar — Driven by purpose, fueled by innovation
+    </div>
+
+    <div class="hero">
+      <div class="hero-left">
+        <h1>Hi, I'm Dharshini M</h1>
+        <div class="hero-role">B.E Computer Science Engineering | 2nd Year</div>
+        <p class="hero-desc">I am interested in learning new skills and improving my knowledge. I come from a supportive family and actively participate in academic and co-curricular activities. My goal is to build a successful career in my field.</p>
+        
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-number">8.726</div>
+            <div class="stat-label">CGPA</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">87.6%</div>
+            <div class="stat-label">10th</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">86.2%</div>
+            <div class="stat-label">12th</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="info-row"><div class="info-icon"><i class="fas fa-id-card"></i></div><div><strong>Register No:</strong> 814724104030</div></div>
+        <div class="info-row"><div class="info-icon"><i class="fas fa-graduation-cap"></i></div><div><strong>Department:</strong> BE-CSE</div></div>
+        <div class="info-row"><div class="info-icon"><i class="fas fa-calendar-alt"></i></div><div><strong>Academic Year:</strong> 2024 – 2028</div></div>
+        <div class="info-row"><div class="info-icon"><i class="fas fa-university"></i></div><div><strong>College:</strong> SRM TRP Engineering College</div></div>
+        <div class="info-row"><div class="info-icon"><i class="fas fa-award"></i></div><div><strong>Scholarship:</strong> Laxmi Charities</div></div>
+        <div class="scholar-highlight"><i class="fas fa-hand-holding-heart"></i> This scholarship helps reduce my financial burden, allowing me to focus on my studies and goals.</div>
+      </div>
+    </div>
+
+    <section id="about">
+      <h2 class="section-title">About & Family</h2>
+      <div class="grid-2col">
+        <div class="card"><div class="card-icon"><i class="fas fa-user-circle"></i></div><h3>Student Details & Bio</h3><p><strong>Name:</strong> Dharshini M<br><strong>Register Number:</strong> 814724104030<br><strong>Department:</strong> BE-CSE<br><strong>Year:</strong> 2nd Year<br><br>I am Dharshini M, a student of the Department of CSE. I am interested in learning new skills and improving my knowledge. I come from a supportive family and actively participate in academic and co-curricular activities. My goal is to build a successful career in my field.</p></div>
+        <div class="card"><div class="card-icon"><i class="fas fa-users"></i></div><h3>Family Background</h3><p>I belong to a middle-class family. My parents support my education. This scholarship helps reduce my financial burden.</p></div>
+      </div>
+    </section>
+
+    <section id="academics">
+      <h2 class="section-title">Academic Performance</h2>
+      <div class="card" style="padding:0; overflow-x:auto;">
+        <table class="academic-table">
+          <thead>
+            <tr><th>Semester</th><th>Year</th><th>GPA</th><th>Remark</th> </thead>
+          <tbody>
+            <tr><td>First</td><td>First</td><td>9.0</td><td>—</td> </tr>
+            <tr><td>Second</td><td>First</td><td>8.73</td><td>—</td> </tr>
+            <tr><td>Third</td><td>Second</td><td>8.45</td><td>In Progress</td> </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:1rem; font-weight:500;"><strong>Overall CGPA (up to 3rd Sem):</strong> 8.726 / 10.0</p>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Skill Development & Certificates</h2>
+      <div class="grid-2col">
+        <div class="card"><div class="card-icon"><i class="fas fa-laptop-code"></i></div><h3>Technical Skills</h3><div class="skill-tags"><span class="skill-tag">HTML/CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">C</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Linux</span></div></div>
+        <div class="card"><div class="card-icon"><i class="fas fa-certificate"></i></div><h3>Certifications & Internship</h3><ul style="margin-left:1rem;"><li>Certification Course: Serverless Framework on AWS</li><li>Internship: Frontend Developer at Elysium Academy</li><li>Linux Certification</li><li>Smart India Hackathon (SIH) Participant</li></ul></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects & Technical Work</h2>
+      <div class="grid-2col">
+        <div class="card"><div class="card-icon"><i class="fas fa-microchip"></i></div><h3>SIH Project Idea</h3><p><strong>Objective:</strong> Solve real-world problems using technology.<br><strong>Tools Used:</strong> Basic programming concepts<br><strong>Outcome:</strong> Developed innovative idea and improved problem-solving skills.</p></div>
+        <div class="card"><div class="card-icon"><i class="fas fa-globe"></i></div><h3>Frontend Development</h3><p>Built responsive static websites and interactive components during internship. Focus on clean UI and modern design.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Co-curricular & Extra-curricular</h2>
+      <div class="grid-2col">
+        <div class="card"><div class="card-icon"><i class="fas fa-running"></i></div><h3>Activities</h3><ul class="achievement-list"><li><i class="fas fa-hands-helping"></i> Participated in Smart India Hackathon (SIH)</li><li><i class="fas fa-chalkboard-user"></i> Attended Workshop on SQL Programming</li><li><i class="fas fa-trophy"></i> Participated in Technical Events (SIH, TNWISE)</li><li><i class="fas fa-futbol"></i> Participated in Many Sports (Kabaddi, Athlete, Cycling...)</li></ul></div>
+        <div class="card"><div class="card-icon"><i class="fas fa-medal"></i></div><h3>Achievements & Awards</h3><ul class="achievement-list"><li><i class="fas fa-star"></i> Academic Excellence Award (First Year)</li><li><i class="fas fa-trophy"></i> Laxmi Charities Scholarship</li></ul></div>
+      </div>
+    </section>
+
+    <section id="impact">
+      <h2 class="section-title">Impact & Future Vision</h2>
+      <div class="grid-2col">
+        <div class="card"><div class="card-icon"><i class="fas fa-heartbeat"></i></div><h3>Impact Statement</h3><p>This scholarship has played an important role in my education by reducing financial difficulties. It motivated me to work harder, improve my skills, and focus on achieving my career goals.</p></div>
+        <div class="card"><div class="card-icon"><i class="fas fa-chart-line"></i></div><h3>Career Goals & Future Plan</h3><p><strong>Short-term goal:</strong> Complete my degree with good marks.<br><strong>Long-term goal:</strong> Get a good job in my field.<br><br>My future plan is to complete my degree with good academic performance and secure a placement in a reputed company. I also aim to enhance my technical and professional skills and achieve long-term career growth.</p></div>
+      </div>
+    </section>
+
+    <div>
+      <div class="contact-card">
+        <i class="fas fa-envelope" style="color:#2563eb; font-size:1.4rem;"></i>
+        <p>dharshinimano1523@gmail.com · +91 6382920424</p>
+        <div class="social-icons">
+          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-lg"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+        <p class="top-ribbon" style="background:transparent; padding:0; margin-top:0.5rem;">✨ Laxmi Charities Scholar — Driven by purpose, fueled by innovation</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Dharshini M — Student Portfolio | BE-CSE | Laxmi Charities 2024–28</p>
+  </footer>
+</body>
+</html>
